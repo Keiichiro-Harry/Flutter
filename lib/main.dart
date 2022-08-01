@@ -50,10 +50,22 @@ class _TodoListPageState extends State<TodoListPage> {
         itemCount: todoList.length,
         itemBuilder: (context, index) {
           return Card(
-            child: ListTile(
-              title: Text(todoList[index]),
+              child: ListTile(
+            title: Text(todoList[index]),
+            trailing: IconButton(
+              onPressed: () {
+                setState(() {
+                  todoList.removeAt(index);
+                });
+              },
+              // 表示アイコン
+              icon: Icon(Icons.thumb_up),
+              // アイコン色
+              color: Colors.blue,
+              // サイズ
+              iconSize: 40,
             ),
-          );
+          ));
         },
       ),
       //右下のボタンを作るぞ
