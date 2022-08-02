@@ -35,7 +35,7 @@ class TodoListPage extends StatefulWidget {
 //いざTodoListPage(1ページ目)
 class _TodoListPageState extends State<TodoListPage> {
   // Todoリストのデータを入れる文字配列を準備するゾ
-  List<String> todoList = [];
+  final todoList = [];
 
   @override
   Widget build(BuildContext context) {
